@@ -6,23 +6,24 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Sign In | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="../../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    {!! Html::style('plugins/bootstrap/css/bootstrap.css') !!}
 
     <!-- Waves Effect Css -->
-    <link href="../../plugins/node-waves/waves.css" rel="stylesheet" />
+    {!! Html::style('plugins/node-waves/waves.css') !!}
 
     <!-- Animation Css -->
-    <link href="../../plugins/animate-css/animate.css" rel="stylesheet" />
+    {!! Html::style('plugins/animate-css/animate.css') !!}
 
     <!-- Custom Css -->
-    <link href="../../css/style.css" rel="stylesheet">
+    {!! Html::style('css/style.css') !!}
+
 </head>
 
 <body class="login-page">
@@ -64,20 +65,20 @@
     </div>
 
     <!-- Jquery Core Js -->
-    <script src="../../plugins/jquery/jquery.min.js"></script>
+    {!! Html::script('plugins/jquery/jquery.min.js') !!}
 
     <!-- Bootstrap Core Js -->
-    <script src="../../plugins/bootstrap/js/bootstrap.js"></script>
+    {!! Html::script('plugins/bootstrap/js/bootstrap.js') !!}
 
     <!-- Waves Effect Plugin Js -->
-    <script src="../../plugins/node-waves/waves.js"></script>
+    {!! Html::script('plugins/node-waves/waves.js') !!}
 
     <!-- Validation Plugin Js -->
-    <script src="../../plugins/jquery-validation/jquery.validate.js"></script>
+    {!! Html::script('plugins/jquery-validation/jquery.validate.js') !!}
 
     <!-- Custom Js -->
-    <script src="../../js/admin.js"></script>
-    <script src="../../js/pages/examples/sign-in.js"></script>
+    {!! Html::script('js/admin.js') !!}
+    {!! Html::script('js/pages/examples/sign-in.js') !!}
 </body>
 
 </html>

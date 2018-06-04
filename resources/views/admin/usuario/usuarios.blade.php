@@ -90,24 +90,27 @@
 @endsection
 @section('scripts')
 
+
     <!-- Jquery DataTable Plugin Js -->
-    {!!Html::script('plugins/jquery-datatable/jquery.dataTables.js') !!}
-    {!!Html::script('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') !!}
+
+    {!!Html::script('plugins/jquery-datatable/jquery.dataTables.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/extensions/export/buttons.flash.min.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/extensions/export/jszip.min.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/extensions/export/pdfmake.min.js')!!}
     {!!Html::script('plugins/jquery-datatable/extensions/export/vfs_fonts.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/extensions/export/buttons.html5.min.js')!!}
+
     {!!Html::script('plugins/jquery-datatable/extensions/export/buttons.print.min.js')!!}
 
 
-    <!-- Custom Js -->
-
-    {!!html::script('js/pages/tables/jquery-datatable.js')!!}
-
-    <!-- Demo Js -->
 
 @endsection
 

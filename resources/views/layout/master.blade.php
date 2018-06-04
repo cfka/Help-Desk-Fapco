@@ -17,16 +17,16 @@
     {!! Html::style('plugins/bootstrap/css/bootstrap.css')!!}
 
     <!-- Waves Effect Css -->
-    {!! Html::style('plugins/node-waves/waves.css" rel=')!!}
+    {!! Html::style('plugins/node-waves/waves.css')!!}
 
     <!-- Animation Css -->
-    {!! Html::style('plugins/animate-css/animate.css" rel=')!!}
+    {!! Html::style('plugins/animate-css/animate.css')!!}
 
     <!-- Custom Css -->
     {!! Html::style('css/style.css')!!}
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    {!! Html::style('css/themes/theme-blue.css" rel=')!!}
+    {!! Html::style('css/themes/theme-blue.css')!!}
 
 
     <!-- JQuery DataTable Css -->
@@ -35,10 +35,10 @@
     {!! Html::style('plugins/bootstrap-select/css/bootstrap-select.css')!!}
 
     <!-- Bootstrap Material Datetime Picker Css -->
-    {!! Html::style('plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet')!!}
+    {!! Html::style('plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')!!}
 
     <!-- Wait Me Css -->
-    {!! Html::style('plugins/waitme/waitMe.css" rel="stylesheet')!!}
+    {!! Html::style('plugins/waitme/waitMe.css')!!}
 
 
 </head>
@@ -215,13 +215,13 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MENU PRINCIPAL</li>
-                    <li class="active">
+                    <li class="">
                         <a href="../../index.html">
                             <i class="material-icons">home</i>
                             <span>Inicio</span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li class="">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">settings</i>
                             <span>Soporte</span>
@@ -241,7 +241,7 @@
                     </li>
                     
                     
-                    <li class="active">
+                    <li class="">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">phonelink</i>
                             <span>Inventario</span>
@@ -258,7 +258,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="active">
+                    <li class="">
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">content_copy</i>
                             <span>Gestión</span>
@@ -305,8 +305,6 @@
         </div>
     </section>
 
-    @yield('scripts')
-
     <!-- Jquery Core Js -->
    {!!Html::script ('plugins/jquery/jquery.min.js')!!}
 
@@ -342,24 +340,7 @@
     {!!Html::script('plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')!!}
 
 
-    <!-- Jquery DataTable Plugin Js -->
-
-    {!!Html::script('plugins/jquery-datatable/jquery.dataTables.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/extensions/export/buttons.flash.min.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/extensions/export/jszip.min.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/extensions/export/pdfmake.min.js')!!}
-    {!!Html::script('plugins/jquery-datatable/extensions/export/vfs_fonts.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/extensions/export/buttons.html5.min.js')!!}
-
-    {!!Html::script('plugins/jquery-datatable/extensions/export/buttons.print.min.js')!!}
+    @yield('scripts')
 
 
 </body>
