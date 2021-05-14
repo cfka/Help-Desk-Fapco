@@ -12,8 +12,14 @@ class modeloticket_solution extends Model
     
     protected $fillable = [
         'ticket_id',
-        'solution_id'
+        'solution_id',
+        'description'
      ] ;
 
     public $timestamps = false;
+
+    public static function getsolutiontick($id){
+        return modeloticket_solution::where('ticket_id','=',$id)
+            ->get();
+    }
 }

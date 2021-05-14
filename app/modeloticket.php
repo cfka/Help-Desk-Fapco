@@ -24,14 +24,16 @@ class modeloticket extends Model
         'assigned_at',
         'blocked_at',
         'unblocked_at',
+        'blocked_reason',
         'elapsed_time',
         'blocked_time',
         'total_time',
-        'efective_time',
+        'effective_time',
         'working_at',
         'according',
         'according_reason',
-        'key'
+        'key',
+        'planning_at'
      ] ;
 
     public $timestamps = true;

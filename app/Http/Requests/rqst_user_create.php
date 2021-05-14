@@ -23,17 +23,14 @@ class rqst_user_create extends FormRequest
      */
     public function rules()
     {
-        return ['document'=>'required',
+        return ['document'=>'required|unique:users|min:7|',
                 'first_name'=>'required',
                 'last_name'=>'required',
-                'email'=>'email',
+                'email'=>'email|unique:users',
                 'position',
                 'type'=>'required',
                 'department_id'=>'required',
-                'avatar',
                 'password'=>'required'
-
-            //
 
 
         ];

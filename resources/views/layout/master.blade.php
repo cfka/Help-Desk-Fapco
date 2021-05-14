@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>@yield('title')</title>
-    
+
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+
 
     <!-- Bootstrap Core Css -->
     {!! Html::style('plugins/bootstrap/css/bootstrap.css')!!}
@@ -22,23 +25,46 @@
     <!-- Animation Css -->
     {!! Html::style('plugins/animate-css/animate.css')!!}
 
+    <!-- Morris Css -->
+    {!! Html::style('plugins/morrisjs/morris.css') !!}
+
     <!-- Custom Css -->
     {!! Html::style('css/style.css')!!}
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     {!! Html::style('css/themes/theme-blue.css')!!}
 
+    <!-- Multi Select Css -->
+    {!! html::style('plugins/multi-select/css/multi-select.css') !!}
 
-    <!-- JQuery DataTable Css -->
-    {!! Html::style('plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css')!!}
     <!-- Bootstrap Select Css -->
     {!! Html::style('plugins/bootstrap-select/css/bootstrap-select.css')!!}
 
-    <!-- Bootstrap Material Datetime Picker Css -->
-    {!! Html::style('plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css')!!}
-
     <!-- Wait Me Css -->
     {!! Html::style('plugins/waitme/waitMe.css')!!}
+
+    <!-- Colorpicker Css -->
+    {!! Html::style('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css') !!}
+
+    <!-- Dropzone Css -->
+    {!! Html::style('plugins/dropzone/dropzone.css') !!}
+
+    <!-- Bootstrap Spinner Css -->
+    {!! Html::style('plugins/jquery-spinner/css/bootstrap-spinner.css') !!}
+
+    <!-- Bootstrap Tagsinput Css -->
+    {!! Html::style('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') !!}
+
+    <!-- noUISlider Css -->
+    {!! Html::style('plugins/nouislider/nouislider.min.css') !!}
+    <!-- JQuery DataTable Css -->
+    {!! Html::style('plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') !!}
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    {!! Html::style('plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') !!}
+    {!! Html::script('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') !!}
+    {!! Html::script('plugins/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js') !!}
 
 
 </head>
@@ -68,246 +94,169 @@
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="../../index.html"> HELPDESK - GRUPO FAPCO</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Notifications -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
-                            <i class="material-icons">notifications</i>
-                            <span class="label-count">7</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">NOTIFICATIONS</li>
-                            <li class="body">
-                                <ul class="menu">
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-light-green">
-                                                <i class="material-icons">person_add</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>12 new members joined</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 14 mins ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-cyan">
-                                                <i class="material-icons">add_shopping_cart</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>4 sales made</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 22 mins ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-red">
-                                                <i class="material-icons">delete_forever</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>Nancy Doe</b> deleted account</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 3 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-orange">
-                                                <i class="material-icons">mode_edit</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>Nancy</b> changed name</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 2 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-blue-grey">
-                                                <i class="material-icons">comment</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>John</b> commented your post</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 4 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-light-green">
-                                                <i class="material-icons">cached</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4><b>John</b> updated status</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> 3 hours ago
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="icon-circle bg-purple">
-                                                <i class="material-icons">settings</i>
-                                            </div>
-                                            <div class="menu-info">
-                                                <h4>Settings updated</h4>
-                                                <p>
-                                                    <i class="material-icons">access_time</i> Yesterday
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="javascript:void(0);">View All Notifications</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- #END# Notifications -->
-             
-                </ul>
+                <a class="navbar-brand" href="{{asset('/userhome')}}"> HELPDESK - GRUPO FAPCO</a>
             </div>
         </div>
     </nav>
     <!-- #Top Bar -->
     <section>
         <!-- Left Sidebar -->
+
         <aside id="leftsidebar" class="sidebar">
             <!-- User Info -->
             <div class="user-info">
                 <div class="image">
-                    <img src="../../images/user.png" width="48" height="48" alt="User" />
+                    <img src="{{asset('/images')}}/user.png" width="48" height="48" alt="User" />
                 </div>
+
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                    <div class="email">john.doe@example.com</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {!!Auth::user()->first_name!!}</div>
+                    <div class="email">{!!Auth::user()->email!!}</div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                            <li role="seperator" class="divider"></li>
-                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="{{asset('/logout')}}"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- #User Info -->
+            @if (Auth::user()->type ==='USER')
             <!-- Menu -->
             <div class="menu">
                 <ul class="list">
                     <li class="header">MENU PRINCIPAL</li>
-                    <li class="">
-                        <a href="../../index.html">
+                    <li class="active">
+                        <a href="{{asset('/userhome')}}">
                             <i class="material-icons">home</i>
                             <span>Inicio</span>
                         </a>
                     </li>
-                    <li class="">
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">settings</i>
-                            <span>Soporte</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="../../pages/forms/basic-form-elements.html">Activos</a>
-                            </li>
-                            <li>
-                                <a href="../../pages/forms/advanced-form-elements.html">Consumibles</a>
-                            </li>
-                            <li>
-                                <a href="../../pages/forms/form-examples.html">Componentes</a>
-                            </li>
-                            
-                        </ul>
-                    </li>
-                    
-                    
-                    <li class="">
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">phonelink</i>
-                            <span>Inventario</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="../../pages/charts/morris.html">Tickets</a>
-                            </li>
-                            <li>
-                                <a href="../../pages/charts/flot.html">Planificación</a>
-                            </li>
-                            <li>
-                                <a href="../../pages/charts/chartjs.html">Estadisticas</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">content_copy</i>
-                            <span>Gestión</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="../../pages/examples/blank.html">Proveedores</a>
-                            </li>
-                            <li>
-                                <a href="../../pages/examples/404.html">Contratos</a>
-                            </li>
-                            <li>
-                                <a href="../../pages/examples/404.html">Servicios</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="active">
-                        <a href="{{asset('/users')}}">
-                            <i class="material-icons">person</i>
-                            <span>Usuarios</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
+            @endif
+            @if(Auth::user()->type !=='USER')
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MENU PRINCIPAL</li>
+                    <li class="active">
+                        <a href="{{asset('/userhome')}}">
+                            <i class="material-icons">home</i>
+                            <span>INICIO</span>
+                        </a>
+                    </li>
+
+
+                    {{-- <li class="">
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <i class="material-icons">settings</i>
+                                <span>SOPORTE</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="{{asset('/tickets')}}">TICKETS</a>
+                    </li>
+                    <li>
+                        <a href="{{asset('/planning')}}">PLANIFICACIÓN</a>
+                    </li>
+                </ul>
+                </li> --}}
+                <li class="">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">phonelink</i>
+                        <span>INVENTARIO</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="{{asset('/assets')}}">ACTIVOS</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/consumables')}}">CONSUMIBLES</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/software')}}">SOFTWARE</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/brand')}}">MARCA</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/assetsType')}}">TIPO DE EQUIPO</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">content_copy</i>
+                        <span>ADMINISTRACIÓN</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="{{asset('/company')}}">EMPRESAS</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/cecos')}}">CENTROS DE COSTOS</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/department')}}">DEPARTAMENTOS</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('/supplier')}}">PROVEEDORES</a>
+                        </li>
+                        {{-- <li>
+                                    <a href="{{asset('/services')}}">SERVICIOS</a>
+                </li> --}}
+
+
+                </ul>
+                </li>
+                <li class="">
+                    <a href="{{asset('/reports')}}">
+                        <i class="material-icons">insert_drive_file</i>
+                        <span>REPORTES</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{asset('/users')}}">
+                        <i class="material-icons">person</i>
+                        <span>USUARIOS</span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+            @endif
+
             <!-- #Menu -->
             <!-- Footer -->
-            <div class="legal">
+            {{-- <div class="legal">
                 <div class="copyright">
                     &copy; Grupo FAPCO 2018 <a href="javascript:void(0);">HELPDESK</a>.
                 </div>
                 <div class="version">
                     <b>Version: </b> 1.0.5
                 </div>
-            </div>
+            </div> --}}
             <!-- #Footer -->
         </aside>
     </section>
 
+
     <section class="content">
         <div class="container-fluid">
+
             @yield('content')
-            
         </div>
     </section>
 
-    <!-- Jquery Core Js -->
-   {!!Html::script ('plugins/jquery/jquery.min.js')!!}
 
+
+    <!-- Jquery Core Js -->
+    {!!Html::script ('plugins/jquery/jquery.min.js')!!}
     <!-- Bootstrap Core Js -->
     {!!Html::script ('plugins/bootstrap/js/bootstrap.js')!!}
 
@@ -322,9 +271,6 @@
 
     <!-- Custom Js -->
     {!!Html::script('js/admin.js')!!}
-
-    {!!Html::script('js/pages/tables/jquery-datatable.js')!!}
-
     {!!Html::script('js/pages/forms/basic-form-elements.js')!!}
 
     <!-- Demo Js -->
@@ -338,7 +284,6 @@
 
     <!-- Bootstrap Material Datetime Picker Plugin Js -->
     {!!Html::script('plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js')!!}
-
 
     @yield('scripts')
 

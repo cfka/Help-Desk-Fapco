@@ -3,37 +3,33 @@
 namespace Helpdesk\Http\Controllers\Auth;
 
 use Helpdesk\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
+use Helpdesk\Http\Requests\login_request;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
 
-    use AuthenticatesUsers;
+    public function  login(login_request $request){
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
+        if(Auth::attempt(['email' => $request['email'], 'password'=> $request['password']])){
+
+            return Redirect::to('/admin');
+        }
+        else{
+            Session::flash('message', 'Datos Incorrectos');
+            return Redirect::to('/');
+        }
     }
+
+    public function logout(){
+        Auth::logout();
+        return Redirect::to('/');
+
+    }
+
+
 }

@@ -11,46 +11,46 @@ function getMorris(type, element) {
         Morris.Line({
             element: element,
             data: [{
-                'period': '2011 Q3',
-                'licensed': 3407,
-                'sorned': 660
+                'año': '2011 Q3',
+                'nueva': 0,
+                'cerradas': 660,
+                'solucionadas':152
+
             }, {
-                    'period': '2011 Q2',
-                    'licensed': 3351,
-                    'sorned': 629
+                    'año': '2011 Q2',
+                'nueva': 307,
+                'cerradas': 0,
+                'solucionadas':12
                 }, {
-                    'period': '2011 Q1',
-                    'licensed': 3269,
-                    'sorned': 618
+                    'año': '2011 Q1',
+                'nueva': 347,
+                'cerradas': 66,
+                'solucionadas':42
                 }, {
-                    'period': '2010 Q4',
-                    'licensed': 3246,
-                    'sorned': 661
+                    'año': '2010 Q4',
+                'nueva': 407,
+                'cerradas': 60,
+                'solucionadas':0
                 }, {
-                    'period': '2009 Q4',
-                    'licensed': 3171,
-                    'sorned': 676
+                    'año': '2009 Q4',
+                'nueva': 547,
+                'cerradas': 660,
+                'solucionadas':12
                 }, {
-                    'period': '2008 Q4',
-                    'licensed': 3155,
-                    'sorned': 681
+                    'año': '2008 Q4',
+                'nueva': 340,
+                'cerradas': 660,
+                'solucionadas':152
                 }, {
-                    'period': '2007 Q4',
-                    'licensed': 3226,
-                    'sorned': 620
-                }, {
-                    'period': '2006 Q4',
-                    'licensed': 3245,
-                    'sorned': null
-                }, {
-                    'period': '2005 Q4',
-                    'licensed': 3289,
-                    'sorned': null
+                    'año': '2007 Q4',
+                'nueva': 507,
+                'cerradas': 660,
+                'solucionadas':15
                 }],
-            xkey: 'period',
-            ykeys: ['licensed', 'sorned'],
-            labels: ['Licensed', 'Off the road'],
-            lineColors: ['rgb(233, 30, 99)', 'rgb(0, 188, 212)'],
+            xkey: 'año',
+            ykeys: ['nueva', 'cerradas','solucionadas'],
+            labels: ['nueva', 'cerradas','solucionadas'],
+            lineColors: ['rgb(233, 30, 99)', 'rgb(0, 188, 212)','rgb(0, 188, 21)'],
             lineWidth: 3
         });
     } else if (type === 'bar') {
